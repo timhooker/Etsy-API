@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkgray;
+}
+
+.main-content {
+  background-color: $gray;
+  width: 90%;
+  margin: 1em auto;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: -5px 5px 15px;
+  color: $darkestblue;
+}
+
+.item-listing {
+  padding: 1em;
+  display: block;
+}
+
+.item-desc {
+  color: $darkestblue;
+  vertical-align: top;
+  display: inline-block;
+  width: 66%;
+  padding: 1em;
+}
+
+.item-price {
+  font-size: 2em;
+}
+
+.item-image {
+  display: inline-block;
+  width: 33%;
+  height: auto;
+}
+
+a {
+  color: $blue;
+}
+
+button {
+  padding: 1em;
+  color: #fff;
+  background-color: $aqua;
+  border: none;
+  font-weight: bold;
+  font-size: .75em;
+  display: block;
+  line-height: 1em;
+}
