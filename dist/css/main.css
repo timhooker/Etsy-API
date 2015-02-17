@@ -63,8 +63,15 @@ a {
   color: #00AAEE;
   text-decoration: none; }
 
-* {
+html {
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
 
 body {
   background-color: darkgray; }
@@ -74,28 +81,87 @@ body {
   width: 90%;
   margin: 1em auto;
   padding: 1em;
-  border-radius: 1em;
-  box-shadow: -5px 5px 15px;
+  box-shadow: 2px 2px 5px #31353D;
   color: #1C1D21; }
+
+.main-content-header {
+  text-align: center;
+  padding: 1em; }
+
+h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  line-height: 1.2em; }
 
 .item-listing {
   padding: 1em;
-  display: block; }
+  display: block;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .item-listing::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .item-desc {
   color: #1C1D21;
   vertical-align: top;
   display: inline-block;
-  width: 66%;
-  padding: 1em; }
+  padding: 1em;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .item-desc:last-child {
+    margin-right: 0; }
+  @media only screen and (min-width: 768px) {
+    .item-desc {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .item-desc:last-child {
+        margin-right: 0; } }
+  @media only screen and (min-width: 1024px) {
+    .item-desc {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .item-desc:last-child {
+        margin-right: 0; } }
 
 .item-price {
-  font-size: 2em; }
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.2em; }
 
 .item-image {
   display: inline-block;
-  width: 33%;
-  height: auto; }
+  height: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .item-image:last-child {
+    margin-right: 0; }
+  @media only screen and (min-width: 768px) {
+    .item-image {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .item-image:last-child {
+        margin-right: 0; } }
+  @media only screen and (min-width: 1024px) {
+    .item-image {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .item-image:last-child {
+        margin-right: 0; } }
 
 a {
   color: #445878; }

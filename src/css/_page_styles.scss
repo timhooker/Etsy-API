@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -11,32 +12,57 @@ body {
   width: 90%;
   margin: 1em auto;
   padding: 1em;
-  border-radius: 1em;
-  box-shadow: -5px 5px 15px;
+  box-shadow: 2px 2px 5px $darkblue;
   color: $darkestblue;
+}
+
+.main-content-header {
+  text-align: center;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  line-height: 1.2em;
 }
 
 .item-listing {
   padding: 1em;
   display: block;
+  @include outer-container;
 }
 
 .item-desc {
   color: $darkestblue;
   vertical-align: top;
   display: inline-block;
-  width: 66%;
   padding: 1em;
+  @include span-columns(12);
+  @media only screen and (min-width: 768px) {
+    @include span-columns(6);
+  }
+  @media only screen and (min-width: 1024px) {
+    @include span-columns(8);
+  }
 }
 
 .item-price {
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.2em;
 }
 
 .item-image {
   display: inline-block;
-  width: 33%;
   height: auto;
+  @include span-columns(8);
+  @media only screen and (min-width: 768px) {
+    @include span-columns(6);
+  }
+  @media only screen and (min-width: 1024px) {
+    @include span-columns(4);
+  }
 }
 
 a {

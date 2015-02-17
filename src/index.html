@@ -5,11 +5,15 @@
   <title>Etsy API</title>
 
   <link rel="stylesheet" href="css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,100' rel='stylesheet' type='text/css'>
 </head>
 <body data-page="etsyShow">
   <div class="main-content">
+    <header class="main-content-header">
 
-    <h1>Etsy Items</h1>
+      <h1>Etsy Items</h1>
+
+    </header>
     <div class="etsy-content">
 
     </div>
@@ -25,13 +29,13 @@
       <% m.items.forEach(function(item){ %>
       <li class="item-listing">
         <a href="<%- item.url %>">
-          <img class="item-image" src=<%- item.MainImage.url_570xN %>>
+          <img class="item-image" src=<%- item.MainImage.url_fullxfull %>>
         </a>
         <span class="item-desc">
-          <h4><%- item.title %></h4>
-          <%= item.description %>
-          <button data-userid="<%- item.user_id %>" class="about-user">About User</button>
+          <h3><%- item.title %></h3>
+          <p><%= item.description %></p>
           <span class="item-price">$<%- item.price %></span>
+          <button data-userid="<%- item.user_id %>" class="about-user">About User</button>
         </span>
       </li>
 
