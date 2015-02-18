@@ -5,7 +5,7 @@ app.EtsyApi = function(spec) {
 
   var baseUrl = 'https://openapi.etsy.com/' + (spec.apiVersion || 'v2');
 
-
+  // adding persistance and 
 
   self = {
 
