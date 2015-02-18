@@ -1,0 +1,19 @@
+<!-- ADD HTML FOR LISTINGS VIEW -->
+
+<ul>
+  <% m.items.forEach(function(item){ %>
+  <li class="item-listing">
+    <a href="<%- item.url %>">
+      <img class="item-image" src=<%- item.MainImage.url_570xN %>>
+    </a>
+    <span class="item-desc">
+      <h3><%- item.title %></h3>
+      <p><%= item.description %></p>
+      <span class="item-price">$<%- item.price %></span>
+      <a href="#users/<%- item.user_id %>">
+        <button data-userid="<%- item.user_id %>" class="about-user">About User</button>
+      </a>
+    </span>
+  </li>
+  <% }); %>
+</ul>

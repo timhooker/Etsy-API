@@ -77,12 +77,12 @@ body {
   background-color: darkgray; }
 
 .main-content {
-  background-color: #EEEFF7;
-  width: 90%;
   margin: 1em auto;
   padding: 1em;
   box-shadow: 2px 2px 5px #31353D;
-  color: #1C1D21; }
+  color: #1C1D21;
+  background-color: #31353D;
+  background: url('../img/tapestry_pattern.png') #EEEFF7; }
 
 .main-content-header {
   text-align: center;
@@ -91,23 +91,34 @@ body {
 h1 {
   font-size: 4em;
   text-transform: uppercase;
-  line-height: 1.2em; }
+  line-height: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  color: tomato;
+  padding: 1em;
+  border: 5px solid tomato;
+  display: inline-block;
+  background-color: #f8f8fb; }
 
 .item-listing {
   padding: 1em;
   display: block;
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center;
+  background-color: #f8f8fb;
+  margin-bottom: 1em; }
   .item-listing::after {
     clear: both;
     content: "";
     display: table; }
 
 .item-desc {
+  text-align: left;
   color: #1C1D21;
   vertical-align: top;
   display: inline-block;
+  word-break: break-word;
   padding: 1em;
   float: left;
   display: block;
@@ -143,7 +154,7 @@ h1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
+  width: 100%; }
   .item-image:last-child {
     margin-right: 0; }
   @media only screen and (min-width: 768px) {

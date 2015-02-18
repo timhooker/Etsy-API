@@ -8,12 +8,12 @@ body {
 }
 
 .main-content {
-  background-color: $gray;
-  width: 90%;
   margin: 1em auto;
   padding: 1em;
   box-shadow: 2px 2px 5px $darkblue;
   color: $darkestblue;
+  background-color: $darkblue;
+  background: url('../img/tapestry_pattern.png') $gray;
 }
 
 .main-content-header {
@@ -25,18 +25,30 @@ h1 {
   font-size: 4em;
   text-transform: uppercase;
   line-height: 1.2em;
+  font-family: 'Roboto Slab', serif;
+  color: tomato;
+  padding: 1em;
+  border: 5px solid tomato;
+  display: inline-block;
+  background-color: tint($gray, 60%);
 }
 
 .item-listing {
   padding: 1em;
   display: block;
   @include outer-container;
+  text-align: center;
+  background-color: tint($gray, 60%);
+  margin-bottom: 1em;
+
 }
 
 .item-desc {
+  text-align: left;
   color: $darkestblue;
   vertical-align: top;
   display: inline-block;
+  word-break: break-word;
   padding: 1em;
   @include span-columns(12);
   @media only screen and (min-width: 768px) {
@@ -56,7 +68,7 @@ h1 {
 .item-image {
   display: inline-block;
   height: auto;
-  @include span-columns(8);
+  @include span-columns(12);
   @media only screen and (min-width: 768px) {
     @include span-columns(6);
   }

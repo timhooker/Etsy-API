@@ -10,7 +10,7 @@ app.EtsyApi = function(spec) {
   self = {
 
     listings: function() {
-      var url = baseUrl + '/listings/active.js?includes=MainImage&api_key=' + spec.apiKey + '&callback=?';
+      var url = baseUrl + '/listings/active.js?limit=25&includes=MainImage&api_key=' + spec.apiKey + '&callback=?';
       var promise= $.Deferred();
 
       var req = $.getJSON(url).done(function(data){
@@ -25,12 +25,11 @@ app.EtsyApi = function(spec) {
       return promise;
     },
     userDetail: function(userID) {
-      var url = baseUrl + 'users/' + userID + '/profile.js?api_key=' + apiKey.spec + '&callback=?';
+      var url = baseUrl + '/users/' + userID + '/profile.js?api_key=' + spec.apiKey + '&callback=?';
       var promise= $.Deferred();
 
       var req = $.getJSON(url).done(function(data){
         if(!data.ok) {
-
           promise.reject(req, 'Unknown Error', data);
         } else {
           promise.resolve(data);

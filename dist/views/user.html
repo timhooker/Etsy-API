@@ -1,0 +1,16 @@
+<% m.users.forEach(function(user){ %>
+  <div class="item-listing">
+    <a href="<%- user.url %>">
+      <img class="item-image" src=<%- user.image_url_75x75 %>>
+    </a>
+    <span class="item-desc">
+      <h3><%- user.first_name %> <%- user.last_name %></h3>
+      <p><%= user.bio %></p>
+      <h4>Materials Used</h4>
+      <p><%= user.materials %></p>
+      <h4>City</h4>
+      <p><%= user.city %></p>          
+      <span class="item-price"><%- user.price %></span>
+    </span>
+  </div>
+<% }); %>
